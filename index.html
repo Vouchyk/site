@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body class="back">
+    
+    <div class="calc">
+        <input type="text" name="res" class="result" readonly /><br /><br />
+        <div class="button-container">
+            
+            <button  type="reset" class="gray" value="Скасувати" onclick="handleButtonClick('AC')">AC</button>
+            <button class="gray" onclick="toggleSign()">+/-</button>
+
+            <button class="gray" onclick="handleButtonClick('%')">%</button>
+            <button class="orange" onclick="handleButtonClick('÷')">÷</button>
+            <button class="number" onclick="handleButtonClick('7')">7</button>
+            <button class="number" onclick="handleButtonClick('8')">8</button>
+            <button class="number" onclick="handleButtonClick('9')">9</button>
+            <button class="orange" onclick="handleButtonClick('*')">×</button>
+            <button class="number" onclick="handleButtonClick('4')">4</button>
+            <button class="number" onclick="handleButtonClick('5')">5</button>
+            <button class="number" onclick="handleButtonClick('6')">6</button>
+            <button class="orange" onclick="handleButtonClick('-')">-</button>
+            <button class="number" onclick="handleButtonClick('1')">1</button>
+            <button class="number" onclick="handleButtonClick('2')">2</button>
+            <button class="number" onclick="handleButtonClick('3')">3</button>
+            <button class="orange" onclick="handleButtonClick('+')">+</button>
+            <button class="zero" onclick="handleButtonClick('0')">0</button>
+            <button class="number" onclick="appendDecimalPoint()">,</button>
+            <button class="orange" onclick="handleButtonClick('=')">=</button>
+        </div>
+        <audio id="clickSound">
+            <source src="click.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
